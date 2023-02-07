@@ -1,13 +1,173 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    background-color: FloralWhite;
+    font-family: 'Courier New', 'Helvetica';
+    font-size: 10vw;
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #calculator {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 10px;
+    margin-top: 5%;
+    display: grid;
+    width: 80%;
+    height: 60vh;
+    max-height: 80vh;
+    overflow: hidden;
+    grid-template-areas:
+      'display display display display'
+      'clear clear divide multiply'
+      'seven eight nine subtract'
+      'four five six add'
+      'one two three equals'
+      'zero zero decimal equals';
+  }
+  
+  #calculator > div {
+    text-align: center;
+  }
+  
+  #calculator > button {
+    cursor: pointer;
+  }
+  
+  #display {
+    
+    grid-area: display;
+    text-align: right !important;
+    background-color: black;
+    color: white;
+    cursor: default;
+    min-height: 20px;
+    padding: 1rem;
+  }
+
+  @media only screen and (min-width: 500px) {
+    body {
+        font-size: 4vw;
+    }
+
+    #calculator {
+        width: 35%;
+        height: 60vh;
+    }
+  }
+  
+  button {
+    border: none;
+  }
+  
+  #clear {
+    grid-area: clear;
+    text-align: left !important;
+    padding-left: 10px;
+    background-color: LightGray;
+  }
+  
+  #clear:hover {
+    background-color: DarkGray;
+  }
+  
+  #multiply {
+    grid-area: multiply;
+    color: Ivory;
+    background-color: Orange;
+    font-weight: bold;
+  }
+  
+  #multiply:hover {
+    background-color: DarkOrange;
+  }
+  
+  #divide {
+    grid-area: divide;
+    font-weight: bold;
+    color: Ivory;
+    background-color: Orange;
+  }
+  
+  #divide:hover {
+    background-color: DarkOrange;
+  }
+  
+  #subtract {
+    grid-area: subtract;
+    color: Ivory;
+    background-color: Orange;
+    font-weight: bold;
+  }
+  
+  #subtract:hover {
+    background-color: DarkOrange;
+  }
+  
+  #add {
+    grid-area: add;
+    color: Ivory;
+    background-color: Orange;
+    font-weight: bold;
+  }
+  
+  #add:hover {
+    background-color: DarkOrange;
+  }
+  
+  #equals {
+    grid-area: equals;
+    color: Ivory;
+    background-color: Orange;
+    font-weight: bold;
+  }
+  
+  #equals:hover {
+    background-color: DarkOrange;
+  }
+  
+  #decimal {
+    grid-area: decimal;
+  }
+  
+  #zero {
+    grid-area: zero;
+  }
+  
+  #one {
+    display-grid: one;
+  }
+  
+  #two {
+    grid-area: two;
+  }
+  
+  #three {
+    grid-area: three;
+  }
+  
+  #four {
+    grid-area: four;
+  }
+  
+  #five {
+    grid-area: five;
+  }
+  
+  #six {
+    grid-area: six;
+  }
+  
+  #seven {
+    grid-area: seven;
+  }
+  
+  #eight {
+    grid-area: eight;
+  }
+  
+  #nine {
+    grid-area: nine;
+  }
